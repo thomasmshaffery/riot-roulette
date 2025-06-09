@@ -1,4 +1,11 @@
+import PageNav from "../components/PageNav";
+
 function Homepage() {
-  return <div>Riot Roulette</div>;
+  return (
+    <div>
+      <PageNav />
+      Riot Roulette
+    </div>
+  );
 }
 export default Homepage;

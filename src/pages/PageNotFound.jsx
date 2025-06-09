@@ -1,11 +1,11 @@
 import PageNav from "../components/PageNav";
 
-function League() {
+function PageNotFound() {
   return (
     <div>
       <PageNav />
-      League of Legends
+      Page not found!
     </div>
   );
 }
-export default League;
+export default PageNotFound;

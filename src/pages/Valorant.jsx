@@ -1,4 +1,11 @@
+import PageNav from "../components/PageNav";
+
 function Valorant() {
-  return <div>Valorant Roulette</div>;
+  return (
+    <div>
+      <PageNav />
+      Valorant Roulette
+    </div>
+  );
 }
 export default Valorant;
