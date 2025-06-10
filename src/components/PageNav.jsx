@@ -5,11 +5,8 @@ import Logo from "./Logo";
 function PageNav() {
   return (
     <nav className={styles.nav}>
+      <Logo />
       <ul>
-        <Logo />
-        <li>
-          <NavLink to="/">HOME</NavLink>
-        </li>
         <li>
           <NavLink to="/league">LEAGUE</NavLink>
         </li>

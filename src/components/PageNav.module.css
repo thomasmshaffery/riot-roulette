@@ -2,27 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: dimgrey;
+  padding-right: 5px;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .nav a:link,
 .nav a:visited {
   text-decoration: none;
-  color: var(--color-light--2);
+  color: #ecf0f1;
   text-transform: uppercase;
   font-size: 1.5rem;
+  padding: 5px;
 }
 
 /* CSS Modules feature */
 .nav a:global(.active) {
-  color: var(--color-brand--2);
+  border-color: #bdc3c7;
+  border-width: 2px;
+  padding: 5px;
 }
 
 a.ctaLink:link,
