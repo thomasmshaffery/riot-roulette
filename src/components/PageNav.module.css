@@ -14,11 +14,16 @@
 
 .nav a:link,
 .nav a:visited {
+  transition: ease-in-out 0.75s;
   text-decoration: none;
   color: #ecf0f1;
   text-transform: uppercase;
   font-size: 1.5rem;
   padding: 5px;
+}
+
+.nav a:hover {
+  transition: ease-in-out 0.75s;
 }
 
 /* CSS Modules feature */
