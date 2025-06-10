@@ -1,8 +1,9 @@
 import PageNav from "../components/PageNav";
+import styles from "./Homepage.module.css";
 
 function Homepage() {
   return (
-    <div>
+    <div className={styles.homepage}>
       <PageNav />
       Riot Roulette
     </div>
