@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 import PageNav from "../components/PageNav";
 import styles from "./Homepage.module.css";
 
@@ -20,6 +21,7 @@ function Homepage() {
         </h2>
         <Button />
       </section>
+      <Footer />
     </div>
   );
 }

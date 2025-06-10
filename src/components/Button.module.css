@@ -1,14 +1,20 @@
 @import url("https://fonts.cdnfonts.com/css/bonvenocf");
 
 .button {
-  width: 150px;
-  height: 200px;
+  transition: 0.75s;
+  height: 50px;
+  width: 200px;
   font-family: "Bonveno", sans-serif;
   color: #ecf0f1;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.498);
+  padding: 5px;
+  background-color: rgba(20, 1, 1, 0.438);
   border-color: #ecf0f1;
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
+}
+
+.button:hover {
+  transition: all 0.75s;
+  letter-spacing: 0.5rem;
 }
