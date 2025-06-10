@@ -6,13 +6,13 @@ function PageNav() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">HOME</NavLink>
         </li>
         <li>
-          <NavLink to="/league">League</NavLink>
+          <NavLink to="/league">LEAGUE</NavLink>
         </li>
         <li>
-          <NavLink to="/valorant">Valorant</NavLink>
+          <NavLink to="/valorant">VALORANT</NavLink>
         </li>
       </ul>
     </nav>

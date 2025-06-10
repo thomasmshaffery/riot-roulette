@@ -6,3 +6,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav :global(.active) {
+  color: red;
+}
