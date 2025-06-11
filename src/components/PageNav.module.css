@@ -28,8 +28,10 @@
 
 /* CSS Modules feature */
 .nav a:global(.active) {
-  border-color: #bdc3c7;
-  border-width: 2px;
+  text-decoration: underline;
+  text-decoration-color: #e74c3c;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
   padding: 5px;
 }
 
