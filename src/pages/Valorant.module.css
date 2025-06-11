@@ -3,7 +3,7 @@
 .valorant {
   height: calc(100vh - 2.5rem);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
-    url("/valorant_background2.jpg");
+    url("/valorant_background3.jpg");
   background-size: cover;
   background-position: center;
   padding: 1.5rem 2.5rem;
