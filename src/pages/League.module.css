@@ -1,0 +1,10 @@
+@import url("https://fonts.cdnfonts.com/css/bonvenocf");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.league {
+  height: calc(100vh - 2.5rem);
+  background-image: url("/background15.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1.5rem 2.5rem;
+}

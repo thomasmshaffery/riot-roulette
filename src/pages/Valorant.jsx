@@ -1,8 +1,9 @@
 import PageNav from "../components/PageNav";
+import styles from "./Valorant.module.css";
 
 function Valorant() {
   return (
-    <div>
+    <div className={styles.valorant}>
       <PageNav />
       Valorant Roulette
     </div>

@@ -1,0 +1,9 @@
+@import url("https://fonts.cdnfonts.com/css/valorant");
+
+.valorant {
+  height: calc(100vh - 2.5rem);
+  background-image: url("/background15.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1.5rem 2.5rem;
+}
