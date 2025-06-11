@@ -15,9 +15,10 @@ function Homepage() {
       <section>
         <h1>RIOT ROULETTE</h1>
         <h2>
-          Discover new looks and enjoy your classics in this fun Riot themed
-          roulette! Find new skins from League of Legends or artwork for your
-          favorite Valorant operators.
+          This roulette application will display a random champion skin for
+          League of Legends and a random agent for Valorant. The homepage cycles
+          between artwork from both games randomly. Thank you for visiting and I
+          hope you enjoy it!
         </h2>
         <Button />
       </section>
