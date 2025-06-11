@@ -3,7 +3,8 @@
 
 .league {
   height: calc(100vh - 2.5rem);
-  background-image: url("/background15.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("/league_background.png");
   background-size: cover;
   background-position: center;
   padding: 1.5rem 2.5rem;
