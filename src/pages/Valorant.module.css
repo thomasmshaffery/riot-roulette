@@ -1,10 +1,60 @@
 @import url("https://fonts.cdnfonts.com/css/valorant");
+@import url("https://fonts.cdnfonts.com/css/bonvenocf");
 
 .valorant {
   height: calc(100vh - 2.5rem);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
-    url("/valorant_background3.jpg");
+    url("/valorant_background.jpg");
   background-size: cover;
   background-position: center;
   padding: 1.5rem 2.5rem;
+}
+
+.valorant section {
+  font-family: "BonvenoCF", sans-serif;
+  font-weight: lighter;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.valorant h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+.valorant h2 {
+  font-family: "Lato", sans-serif;
+  text-shadow: 0px 0px 4px #000000;
+  width: 50%;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  line-height: 165%;
+}
+
+.button {
+  transition: 0.75s;
+  height: 50px;
+  width: 200px;
+  font-family: "Bonveno", sans-serif;
+  color: #ecf0f1;
+  padding: 5px;
+  background-color: rgba(24, 24, 24, 0.317);
+  border-color: #ecf0f1;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+
+.button:hover {
+  transition: all 0.75s;
+  letter-spacing: 0.5rem;
+  background-color: #0000006f;
 }

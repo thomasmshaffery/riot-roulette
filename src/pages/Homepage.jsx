@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import PageNav from "../components/PageNav";
@@ -20,7 +21,9 @@ function Homepage() {
           between artwork from both games randomly. Thank you for visiting and I
           hope you enjoy it!
         </h2>
-        <Button />
+        <Link to="League">
+          <Button>DISCOVER</Button>
+        </Link>
       </section>
       <Footer />
     </div>
