@@ -32,8 +32,9 @@ function Valorant({ agents }) {
     <div className={styles.valorant}>
       <PageNav />
       <section>
-        {currentAgent && <Agent agent={currentAgent} />}
         {!currentAgent && <h1>Get Rolling!</h1>}
+        {currentAgent && <Agent agent={currentAgent} />}
+
         <button
           className={styles.button}
           onClick={() => handleSetRandomNumber()}
