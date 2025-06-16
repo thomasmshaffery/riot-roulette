@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import PageNav from "../components/PageNav";
 import styles from "./Homepage.module.css";
 
-function Homepage() {
+function Homepage({ isLoaded }) {
   const background =
     'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("background' +
     Math.floor(Math.random() * 30 + 1) +
@@ -12,7 +12,7 @@ function Homepage() {
 
   return (
     <div style={{ backgroundImage: background }} className={styles.homepage}>
-      <PageNav />
+      {isLoaded && <PageNav />}
       <section>
         <h1>RIOT ROULETTE</h1>
         <h2>
