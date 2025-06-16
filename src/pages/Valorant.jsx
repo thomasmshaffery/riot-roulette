@@ -10,6 +10,7 @@ function Valorant({ agents }) {
   const [randomNumber, setRandomNumber] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const MAX = agents.data.filter((agent) => agent.isPlayableCharacter).length;
+  console.log(MAX);
 
   function generateRandomNumber() {
     return Math.floor(Math.random() * MAX);
