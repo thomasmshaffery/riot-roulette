@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage";
-import Valorant from "./pages/valorant";
-import League from "./pages/League";
 import PageNotFound from "./pages/PageNotFound";
 import { useEffect, useState } from "react";
+import Homepage from "./pages/Homepage";
+import Valorant from "./pages/Valorant";
+import League from "./pages/League";
 
 function App() {
   const [agents, setAgents] = useState([]);
