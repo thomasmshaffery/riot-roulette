@@ -7,7 +7,7 @@ import styles from "./Homepage.module.css";
 function Homepage({ isLoaded }) {
   const background =
     'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("background' +
-    Math.floor(Math.random() * 30 + 1) +
+    Math.floor(Math.random() * 18 + 1) +
     '.jpg")';
 
   return (
