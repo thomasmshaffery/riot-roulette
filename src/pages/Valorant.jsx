@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 function Valorant({ agents }) {
   const [currentAgent, setCurrentAgent] = useState(null);
   const [randomNumber, setRandomNumber] = useState(null);
-  const MAX = agents.data.length;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const MAX = agents.data.filter((agent) => agent.isPlayableCharacter).length;
 
   function generateRandomNumber() {
     return Math.floor(Math.random() * MAX);
@@ -22,6 +23,7 @@ function Valorant({ agents }) {
     function () {
       async function displayAgent() {
         setCurrentAgent(agents.data[randomNumber]);
+        setIsLoaded(true);
       }
       displayAgent();
     },
@@ -38,14 +40,14 @@ function Valorant({ agents }) {
         ) : (
           ""
         )}
-        {/* {currentAgent && <Agent agent={currentAgent} />} */}
-
-        <button
-          className={styles.button}
-          onClick={() => handleSetRandomNumber()}
-        >
-          Roll Agent
-        </button>
+        {isLoaded && (
+          <button
+            className={styles.button}
+            onClick={() => handleSetRandomNumber()}
+          >
+            Roll Agent
+          </button>
+        )}
       </section>
       <Footer />
     </div>

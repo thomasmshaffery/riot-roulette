@@ -30,7 +30,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage isLoaded={isLoaded} />} />
-        <Route path="valorant" element={<Valorant agents={agents} />} />
+        {isLoaded && (
+          <Route
+            path="valorant"
+            element={<Valorant agents={agents} onSetAgents={setAgents} />}
+          />
+        )}
         <Route path="league" element={<League />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
