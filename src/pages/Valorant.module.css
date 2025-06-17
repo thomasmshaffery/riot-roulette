@@ -51,6 +51,7 @@
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
+  margin-bottom: 2vh;
 }
 
 .button:hover {

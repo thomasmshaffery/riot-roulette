@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 5px;
+  /* padding-right: 5px; */
+  width: 94vw;
 }
 
 .nav ul {
