@@ -8,12 +8,12 @@ import League from "./pages/League";
 function App() {
   const [agents, setAgents] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [leagueVersion, setLeagueVersion] = useState("");
 
   useEffect(function () {
     async function getAgents() {
       try {
         const res = await fetch(`https://valorant-api.com/v1/agents`);
-
         if (!res.ok) throw new Error("Unable to retrieve agents.");
 
         const data = await res.json();
@@ -22,7 +22,22 @@ function App() {
         console.log(err.message);
       }
     }
+
+    async function getChampions() {
+      try {
+        const res = await fetch(
+          `https://ddragon.leagueoflegends.com/api/versions.json`
+        );
+        if (!res.ok) throw new Error("Unable to access versions.");
+
+        const data = await res.json();
+        setLeagueVersion(data[0]);
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
     getAgents();
+    getChampions();
     setIsLoaded(true);
   }, []);
 
@@ -36,7 +51,10 @@ function App() {
             element={<Valorant agents={agents} onSetAgents={setAgents} />}
           />
         )}
-        <Route path="league" element={<League />} />
+        <Route
+          path="league"
+          element={<League leagueVersion={leagueVersion} isLoaded={isLoaded} />}
+        />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

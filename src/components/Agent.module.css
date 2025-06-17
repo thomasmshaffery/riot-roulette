@@ -1,8 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/valorant");
 
 .agent {
-  width: 40vw;
-  overflow: auto;
+  width: 600px;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,8 +19,11 @@
 }
 
 .agent img {
-  width: 40vw;
-  height: 60vh;
+  /* width: 40vw;
+  height: 60vh; */
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .agent h1 {
