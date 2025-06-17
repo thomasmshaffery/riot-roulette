@@ -9,8 +9,8 @@ function Valorant({ agents }) {
   const [currentAgent, setCurrentAgent] = useState(null);
   const [randomNumber, setRandomNumber] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const MAX = agents.data.filter((agent) => agent.isPlayableCharacter).length;
-  console.log(MAX);
+  const filtered = agents.data.filter((agent) => agent.isPlayableCharacter);
+  const MAX = filtered.length;
 
   function generateRandomNumber() {
     return Math.floor(Math.random() * MAX);
@@ -23,7 +23,7 @@ function Valorant({ agents }) {
   useEffect(
     function () {
       async function displayAgent() {
-        setCurrentAgent(agents.data[randomNumber]);
+        setCurrentAgent(filtered[randomNumber]);
         setIsLoaded(true);
       }
       displayAgent();
