@@ -72,7 +72,10 @@ function League({ leagueVersion }) {
       <section className={styles.section}>
         {!currentChampion && <h1>Roll A Champion!</h1>}
         {currentChampion && (
-          <Champion champion={currentChampion} champions={champions} />
+          <Champion
+            champion={currentChampion}
+            championData={champions.data[currentChampion]}
+          />
         )}
         {isLoaded && (
           <button

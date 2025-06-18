@@ -1,6 +1,6 @@
 import styles from "./Champion.module.css";
 
-function Champion({ champion, champions }) {
+function Champion({ champion, championData }) {
   const championImage =
     `https://ddragon.leagueoflegends.com/cdn/img/champion/centered/` +
     champion +
@@ -8,10 +8,10 @@ function Champion({ champion, champions }) {
   return (
     <div className={styles.champion}>
       <h1>
-        {champions.data[champion].name} {champions.data[champion].title}
+        {championData.name} {championData.title}
       </h1>
       <img src={championImage}></img>
-      <h2>{champions.data[champion].blurb}</h2>
+      <h2>{championData.blurb}</h2>
     </div>
   );
 }
