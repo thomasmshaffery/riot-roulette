@@ -8,8 +8,6 @@ import League from "./pages/League";
 function App() {
   const [agents, setAgents] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [leagueVersion, setLeagueVersion] = useState("");
-  // const version = leagueVersion;
 
   useEffect(function () {
     async function getAgents() {
@@ -23,23 +21,7 @@ function App() {
         console.log(err.message);
       }
     }
-
-    async function getLatestVersion() {
-      try {
-        const res = await fetch(
-          `https://ddragon.leagueoflegends.com/api/versions.json`
-        );
-        if (!res.ok) throw new Error("Unable to access versions.");
-
-        const data = await res.json();
-        setLeagueVersion(data[0]);
-      } catch (err) {
-        console.log(err.message);
-      }
-    }
-
     getAgents();
-    getLatestVersion();
     setIsLoaded(true);
   }, []);
 
@@ -53,10 +35,7 @@ function App() {
             element={<Valorant agents={agents} onSetAgents={setAgents} />}
           />
         )}
-        <Route
-          path="league"
-          element={<League leagueVersion={leagueVersion} />}
-        />
+        <Route path="league" element={<League />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

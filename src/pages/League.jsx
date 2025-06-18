@@ -4,7 +4,7 @@ import PageNav from "../components/PageNav";
 import styles from "./League.module.css";
 import Champion from "../components/Champion";
 
-function League({ leagueVersion }) {
+function League() {
   const [champions, setChampions] = useState([]);
   const [championList, setChampionList] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,30 +22,6 @@ function League({ leagueVersion }) {
       generateChampionList();
     },
     [champions]
-  );
-
-  useEffect(
-    function () {
-      async function getChampionData() {
-        try {
-          const res = await fetch(
-            `https://ddragon.leagueoflegends.com/cdn/` +
-              leagueVersion +
-              `/data/en_US/champion.json`
-          );
-          if (!res.ok) throw new Error("Unable to fetch champion list.");
-
-          const data = await res.json();
-          setChampions(data);
-        } catch (err) {
-          console.log(err.message);
-        }
-      }
-
-      getChampionData();
-      setIsLoaded(true);
-    },
-    [leagueVersion]
   );
 
   useEffect(
@@ -74,7 +50,7 @@ function League({ leagueVersion }) {
         {currentChampion && (
           <Champion
             champion={currentChampion}
-            championData={champions.data[currentChampion]}
+            // championData={champions.data[currentChampion]}
           />
         )}
         {isLoaded && (
