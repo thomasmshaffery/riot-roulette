@@ -9,8 +9,8 @@
   margin-bottom: 2vh;
 
   background: rgba(23, 23, 23, 0.505);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid rgba(31, 22, 161, 0.3);
   box-shadow: 0 0 50px 15px #12015f52;
