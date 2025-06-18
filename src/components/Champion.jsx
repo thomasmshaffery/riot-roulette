@@ -7,7 +7,9 @@ function Champion({ champion, champions }) {
     `_0.jpg`;
   return (
     <div className={styles.champion}>
-      <h1>{champions.data[champion].name}</h1>
+      <h1>
+        {champions.data[champion].name} {champions.data[champion].title}
+      </h1>
       <img src={championImage}></img>
       <h2>{champions.data[champion].blurb}</h2>
     </div>

@@ -27,4 +27,5 @@
 .champion h1 {
   font-family: "Bellefaire", serif;
   font-size: 4rem;
+  max-width: 100%;
 }
