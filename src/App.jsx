@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
-import { useEffect, useState } from "react";
+import { useEffect, useState, version } from "react";
 import Homepage from "./pages/Homepage";
 import Valorant from "./pages/Valorant";
 import League from "./pages/League";
@@ -9,6 +9,7 @@ function App() {
   const [agents, setAgents] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [leagueVersion, setLeagueVersion] = useState("");
+  // const version = leagueVersion;
 
   useEffect(function () {
     async function getAgents() {
@@ -23,7 +24,7 @@ function App() {
       }
     }
 
-    async function getChampions() {
+    async function getLatestVersion() {
       try {
         const res = await fetch(
           `https://ddragon.leagueoflegends.com/api/versions.json`
@@ -36,8 +37,9 @@ function App() {
         console.log(err.message);
       }
     }
+
     getAgents();
-    getChampions();
+    getLatestVersion();
     setIsLoaded(true);
   }, []);
 
@@ -53,7 +55,7 @@ function App() {
         )}
         <Route
           path="league"
-          element={<League leagueVersion={leagueVersion} isLoaded={isLoaded} />}
+          element={<League leagueVersion={leagueVersion} />}
         />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
