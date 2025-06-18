@@ -1,17 +1,14 @@
+import { useEffect, useState } from "react";
 import styles from "./Champion.module.css";
 
-function Champion({ champion, championData }) {
-  const championImage =
-    `https://ddragon.leagueoflegends.com/cdn/img/champion/centered/` +
-    champion +
-    `_0.jpg`;
+function Champion({ currentChampion }) {
   return (
     <div className={styles.champion}>
       <h1>
-        {championData.name} {championData.title}
+        {currentChampion} {currentChampion.blurb}
       </h1>
-      <img src={championImage}></img>
-      <h2>{championData.blurb}</h2>
+      {/* <img src={championImage}></img> */}
+      <h2></h2>
     </div>
   );
 }

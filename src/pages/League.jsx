@@ -24,6 +24,22 @@ function League() {
     [champions]
   );
 
+  useEffect(function () {
+    async function getChampions() {
+      try {
+        const res = await fetch("./champion.json");
+        if (!res.ok) throw new Error("Something went wrong retrieving data.");
+
+        const data = await res.json();
+        setChampions(data);
+      } catch (err) {
+        console.log(err.message);
+      }
+    }
+    getChampions();
+    setIsLoaded(true);
+  }, []);
+
   useEffect(
     function () {
       async function displayChampion() {
@@ -47,12 +63,7 @@ function League() {
       <PageNav />
       <section className={styles.section}>
         {!currentChampion && <h1>Roll A Champion!</h1>}
-        {currentChampion && (
-          <Champion
-            champion={currentChampion}
-            // championData={champions.data[currentChampion]}
-          />
-        )}
+        {currentChampion && <Champion currentChampion={currentChampion} />}
         {isLoaded && (
           <button
             className={styles.button}
