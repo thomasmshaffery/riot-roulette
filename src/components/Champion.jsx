@@ -31,7 +31,6 @@ function Champion({ champName, currentChampion }) {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundColor: color,
-        transition: "background-image 1s ease-in-out",
       }}
     >
       <h1>{randomSkinName}</h1>
