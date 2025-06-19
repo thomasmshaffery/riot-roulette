@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2vh;
-  transition: background-image 0.75s ease-in-out;
   background: rgba(23, 23, 23, 0.505);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
