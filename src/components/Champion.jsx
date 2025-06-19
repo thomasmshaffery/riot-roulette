@@ -18,14 +18,15 @@ function Champion({ champName, currentChampion }) {
   const randomSkinNumber = skins[randomNumber].num;
   const skinImage =
     `url(./centered/` + champName + `_` + randomSkinNumber + `.jpg)`;
-  const background =
-    "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))," + skinImage;
+
+  // const background =
+  //   "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))," + skinImage;
 
   return (
     <div
       className={styles.champion}
       style={{
-        backgroundImage: background,
+        backgroundImage: skinImage,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

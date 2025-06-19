@@ -13,7 +13,7 @@
   -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid rgba(31, 22, 161, 0.3);
-  box-shadow: 0 0 50px 15px #12015f52;
+  box-shadow: 0 0 50px 15px #0432b182;
 }
 
 .champion img {
@@ -26,7 +26,15 @@
 
 .champion h1 {
   font-family: "Bellefaire", serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   max-width: 100%;
-  background: transparent;
+  color: rgba(255, 255, 255, 0.77); /* Semi-transparent white text */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+  /* Optional: Add text-shadow for depth */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(201, 201, 201, 0.448);
+  border-radius: 8px;
+  position: relative;
+  top: 5%;
+  padding: 10px;
 }
