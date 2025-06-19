@@ -5,24 +5,13 @@ import styles from "./League.module.css";
 import Champion from "../components/Champion";
 
 function League() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [champions, setChampions] = useState([]);
   const [championList, setChampionList] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [currentChampion, setCurrentChampion] = useState(null);
   const [randomNumber, setRandomNumber] = useState(null);
+  const champName = championList[randomNumber];
   const MAX = championList.length;
-
-  useEffect(
-    function () {
-      async function generateChampionList() {
-        try {
-          setChampionList(Object.keys(champions.data));
-        } catch (err) {}
-      }
-      generateChampionList();
-    },
-    [champions]
-  );
 
   useEffect(function () {
     async function getChampions() {
@@ -42,10 +31,32 @@ function League() {
 
   useEffect(
     function () {
-      async function displayChampion() {
-        setCurrentChampion(championList[randomNumber]);
+      async function generateChampionList() {
+        try {
+          setChampionList(Object.keys(champions.data));
+        } catch (err) {}
       }
-      displayChampion();
+      generateChampionList();
+    },
+    [champions]
+  );
+
+  useEffect(
+    function () {
+      async function fetchChampion() {
+        try {
+          const res = await fetch(
+            `./champion/` + championList[randomNumber] + `.json`
+          );
+          if (!res.ok) throw new Error("Champion details couldn't be fetched.");
+
+          const data = await res.json();
+          setCurrentChampion(data);
+        } catch (err) {
+          console.log(err.message);
+        }
+      }
+      fetchChampion();
     },
     [randomNumber]
   );
@@ -54,7 +65,7 @@ function League() {
     return Math.floor(Math.random() * MAX);
   }
 
-  function handleSetRandomNumber() {
+  function handleSetRandomChampion() {
     setRandomNumber(generateRandomNumber());
   }
 
@@ -63,11 +74,13 @@ function League() {
       <PageNav />
       <section className={styles.section}>
         {!currentChampion && <h1>Roll A Champion!</h1>}
-        {currentChampion && <Champion currentChampion={currentChampion} />}
+        {currentChampion && (
+          <Champion champName={champName} currentChampion={currentChampion} />
+        )}
         {isLoaded && (
           <button
             className={styles.button}
-            onClick={() => handleSetRandomNumber()}
+            onClick={() => handleSetRandomChampion()}
           >
             Roll Champion
           </button>

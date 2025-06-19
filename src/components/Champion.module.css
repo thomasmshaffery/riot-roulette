@@ -19,13 +19,14 @@
 .champion img {
   /* width: 40vw;
   height: 60vh; */
-  object-fit: cover;
-  max-width: 100%;
+  object-fit: contain;
+  max-width: fit-content;
   max-height: 100%;
 }
 
 .champion h1 {
   font-family: "Bellefaire", serif;
-  font-size: 4rem;
+  font-size: 3rem;
   max-width: 100%;
+  background: transparent;
 }
