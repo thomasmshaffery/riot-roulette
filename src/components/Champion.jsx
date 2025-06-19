@@ -14,6 +14,7 @@ function Champion({ champName, currentChampion }) {
 
   const MAX = skins.length;
   const randomNumber = Math.floor(Math.random() * (MAX - 1)) + 1;
+  const color = "background: rgba(23, 23, 23, 0.505)";
   const randomSkinName = skins[randomNumber].name;
   const randomSkinNumber = skins[randomNumber].num;
   const skinImage =
@@ -29,6 +30,7 @@ function Champion({ champName, currentChampion }) {
         backgroundImage: skinImage,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: color,
       }}
     >
       <h1>{randomSkinName}</h1>
