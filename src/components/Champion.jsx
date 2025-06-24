@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styles from "./Champion.module.css";
 
 function Champion({ champName, currentChampion }) {
@@ -25,6 +24,7 @@ function Champion({ champName, currentChampion }) {
 
   return (
     <div
+      key={champName}
       className={styles.champion}
       style={{
         backgroundImage: skinImage,

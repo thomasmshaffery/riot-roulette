@@ -13,14 +13,6 @@
   border-radius: 20px;
   border: 1px solid rgba(31, 22, 161, 0.3);
   box-shadow: 0 0 50px 15px #0432b182;
-}
-
-.champion img {
-  /* width: 40vw;
-  height: 60vh; */
-  object-fit: contain;
-  max-width: fit-content;
-  max-height: 100%;
   transition: opacity 0.4 ease-in-out 0.3ms;
 }
 
