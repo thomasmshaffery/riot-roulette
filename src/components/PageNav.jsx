@@ -4,9 +4,9 @@ import Logo from "./Logo";
 
 function PageNav() {
   return (
-    <nav className={styles.nav}>
+    <nav className="flex items-center">
       <Logo />
-      <ul>
+      <ul className="flex justify-between">
         <li>
           <NavLink to="/league">LEAGUE</NavLink>
         </li>
