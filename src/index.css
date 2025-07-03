@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-
+@import "tailwindcss";
 :root {
   font-family: "Bellefair", "serif";
 }

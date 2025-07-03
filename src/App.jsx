@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
-import { useEffect, useState, version } from "react";
+import { useEffect, useState } from "react";
 import Homepage from "./pages/Homepage";
 import Valorant from "./pages/Valorant";
 import League from "./pages/League";

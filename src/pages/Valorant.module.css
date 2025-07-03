@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/valorant");
 @import url("https://fonts.cdnfonts.com/css/bonvenocf");
+@import "tailwindcss";
 
 .valorant {
   height: calc(100vh - 2.5rem);
