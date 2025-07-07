@@ -5,9 +5,8 @@ import Logo from "./Logo";
 function PageNav() {
   return (
     <nav className="flex items-center justify-around text-white p-6">
-      {/* <NavLink to="/"> */}
       <Logo />
-      {/* </NavLink> */}
+      <NavLink to="/">HOME</NavLink>
       <NavLink to="/league" className="block">
         LEAGUE
       </NavLink>
