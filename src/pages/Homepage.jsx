@@ -14,8 +14,8 @@ function Homepage({ isLoaded }) {
     <div style={{ backgroundImage: background }} className="bg-cover bg-center w-full min-h-svh">
       {isLoaded && <PageNav />}
       <div className="flex flex-col min-h-svh justify-between">
-      <section className="place-items-center">
-        <h1 className="text-shadow-neutral-50">RIOT ROULETTE</h1>
+      <section className="h-10 place-items-center">
+        <h1 className="text-white">RIOT ROULETTE</h1>
         <h2 className="text-white max-w-3/5 font-sans text-sm">
           This roulette application will display a random champion skin for
           League of Legends and a random agent for Valorant. The homepage cycles

@@ -4,14 +4,18 @@ import Logo from "./Logo";
 
 function PageNav() {
   return (
-    <nav className="flex items-center justify-around text-white p-6">
+    <nav className="flex items-center justify-around text-white mt-10">
       <Logo />
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/league" className="block">
+      <NavLink to="/" className="inline-block">
+        HOME
+      </NavLink>
+      <NavLink to="/league" className="inline-block">
         LEAGUE
       </NavLink>
 
-      <NavLink to="/valorant">VALORANT</NavLink>
+      <NavLink to="/valorant" className="inline-block">
+        VALORANT
+      </NavLink>
     </nav>
   );
 }

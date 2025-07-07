@@ -7,7 +7,7 @@ function Logo() {
     <img
       src="/logo.png"
       alt="Riot Roulette"
-      className="w-2/5 h-2/5 sm:w-1/3 sm:h-1/3"
+      className="w-1/3 h-1/3 sm:w-1/4 sm:h-1/4 pt-10"
     ></img>
   );
 }
