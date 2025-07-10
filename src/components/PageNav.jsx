@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 function PageNav() {
   return (
-    <nav className="flex items-center justify-around text-white mt-10">
+    <nav className="flex items-center justify-around text-white">
       <Logo />
       <NavLink to="/" className="inline-block">
         HOME

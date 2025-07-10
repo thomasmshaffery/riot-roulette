@@ -13,6 +13,9 @@ function League() {
   const champName = championList[randomNumber];
   const MAX = championList.length;
 
+  const background = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("/league_background.jpg")`;
+
   useEffect(function () {
     async function getChampions() {
       try {
@@ -70,23 +73,46 @@ function League() {
   }
 
   return (
-    <div className={styles.league}>
-      <PageNav />
-      <section className={styles.section}>
-        {!currentChampion && <h1>Roll A Champion!</h1>}
-        {currentChampion && (
-          <Champion champName={champName} currentChampion={currentChampion} />
-        )}
-        {isLoaded && (
-          <button
-            className={styles.button}
-            onClick={() => handleSetRandomChampion()}
-          >
-            Roll Champion
-          </button>
-        )}
-      </section>
-      <Footer />
+    <div
+      style={{ backgroundImage: background }}
+      className="bg-cover bg-center w-full h-full"
+    >
+      <div className="flex flex-col relative min-h-svh justify-between">
+        <PageNav />
+        <section className="h-8 place-items-center">
+          {!currentChampion && (
+            <div className="place-items-center">
+              <h1 className="text-white text-center text-4xl relative bottom-30 pb-80 sm:text-8xl">
+                Roll Champion
+              </h1>
+              <div className="">
+                <button
+                  className={styles.button}
+                  onClick={() => handleSetRandomChampion()}
+                >
+                  Roll Champion
+                </button>
+              </div>
+            </div>
+          )}
+          {currentChampion && (
+            <div className="fixed place-items-center left-10 bottom-20 sm:left-1/9">
+              <Champion
+                champName={champName}
+                currentChampion={currentChampion}
+              />
+
+              <button
+                className={styles.button}
+                onClick={() => handleSetRandomChampion()}
+              >
+                Roll Test Champion
+              </button>
+            </div>
+          )}
+        </section>
+        <Footer className="h-5" />
+      </div>
     </div>
   );
 }

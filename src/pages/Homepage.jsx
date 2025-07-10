@@ -15,10 +15,10 @@ function Homepage({ isLoaded }) {
       className="bg-cover bg-center w-full min-h-svh"
     >
       {isLoaded}
-      <div className="flex flex-col min-h-svh justify-between">
-        <PageNav />
-        <section className="h-8 relative bottom-5 place-items-center">
-          <h1 className="text-white text-4xl relative bottom-40 pb-80 sm:text-8xl">
+      <div className="flex flex-col relative min-h-svh justify-between">
+        <PageNav className="relative top-10" />
+        <section className="h-8 relative bottom-2 place-items-center">
+          <h1 className="text-white text-center text-4xl relative bottom-40 pb-80 sm:text-8xl">
             RIOT ROULETTE
           </h1>
           <h2 className="text-white text-center max-w-3/4 relative bottom-20 font-sans text-sm/6 sm:max-w-2/4">
@@ -29,7 +29,7 @@ function Homepage({ isLoaded }) {
             Dragon as well as assets provided by Riot Games.
           </h2>
           <Link to="League">
-            <Button className="">DISCOVER</Button>
+            <Button>DISCOVER</Button>
           </Link>
         </section>
         <Footer className="h-5" />
