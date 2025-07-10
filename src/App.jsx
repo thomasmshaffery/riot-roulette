@@ -12,7 +12,7 @@ function App() {
   useEffect(function () {
     async function getAgents() {
       try {
-        const res = await fetch(`https://valorant-api.com/v1/agents`);
+        const res = await fetch(`./agents.json`);
         if (!res.ok) throw new Error("Unable to retrieve agents.");
 
         const data = await res.json();

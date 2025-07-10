@@ -11,22 +11,26 @@ function Homepage({ isLoaded }) {
     '.jpg")';
 
   return (
-    <div style={{ backgroundImage: background }} className="bg-cover bg-center w-full min-h-svh">
-      {isLoaded && <PageNav />}
+    <div
+      style={{ backgroundImage: background }}
+      className="bg-cover bg-center w-full min-h-svh"
+    >
+      {isLoaded}
       <div className="flex flex-col min-h-svh justify-between">
-      <section className="h-10 place-items-center">
-        <h1 className="text-white">RIOT ROULETTE</h1>
-        <h2 className="text-white max-w-3/5 font-sans text-sm">
-          This roulette application will display a random champion skin for
-          League of Legends and a random agent for Valorant. The homepage cycles
-          between artwork from both games randomly. Thank you for visiting and I
-          hope you enjoy it!
-        </h2>
-        <Link to="League">
-          <Button>DISCOVER</Button>
-        </Link>
-      </section>
-       <Footer className="h-5" />
+        <PageNav />
+        <section className="h-8 gap-3.5 place-items-center">
+          <h1 className="text-white pb-80">RIOT ROULETTE</h1>
+          <h2 className="text-white max-w-3/5 font-sans text-sm">
+            This roulette application will display a random champion skin for
+            League of Legends and a random agent for Valorant. The homepage
+            cycles between artwork from both games randomly. Thank you for
+            visiting and I hope you enjoy it!
+          </h2>
+          <Link to="League">
+            <Button>DISCOVER</Button>
+          </Link>
+        </section>
+        <Footer className="h-5" />
       </div>
     </div>
   );
