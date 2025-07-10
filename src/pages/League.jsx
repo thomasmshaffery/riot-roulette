@@ -106,7 +106,7 @@ function League() {
                 className={styles.button}
                 onClick={() => handleSetRandomChampion()}
               >
-                Roll Test Champion
+                Roll Champion
               </button>
             </div>
           )}
