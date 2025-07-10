@@ -35,7 +35,7 @@ function Valorant({ agents }) {
     <div className={styles.valorant}>
       <PageNav />
       <section>
-        {!currentAgent && <h1>Get Rolling!</h1>}
+        {!currentAgent && <h1>Roll an Agent!</h1>}
         {currentAgent && currentAgent.isPlayableCharacter ? (
           <Agent agent={currentAgent} />
         ) : (

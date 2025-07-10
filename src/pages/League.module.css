@@ -23,6 +23,6 @@
 
 .button:hover {
   transition: all 0.75s;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
   background-color: #0000006f;
 }

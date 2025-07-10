@@ -83,7 +83,7 @@ function League() {
           {!currentChampion && (
             <div className="place-items-center">
               <h1 className="text-white text-center text-4xl relative bottom-30 pb-80 sm:text-8xl">
-                Roll Champion
+                Roll a Champion!
               </h1>
               <div className="">
                 <button
