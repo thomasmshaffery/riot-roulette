@@ -20,7 +20,7 @@ function Agent({ agent }) {
         {agent.displayName}
       </h1>
       <img src={agent.bustPortrait}></img>
-      <h2>{agent.description}</h2>
+      <h2 className="font-sans tracking-wide">{agent.description}</h2>
     </div>
   );
 }

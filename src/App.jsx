@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
-import { useEffect, useState, version } from "react";
+import { useEffect, useState } from "react";
 import Homepage from "./pages/Homepage";
 import Valorant from "./pages/Valorant";
 import League from "./pages/League";
@@ -12,7 +12,7 @@ function App() {
   useEffect(function () {
     async function getAgents() {
       try {
-        const res = await fetch(`https://valorant-api.com/v1/agents`);
+        const res = await fetch(`./agents.json`);
         if (!res.ok) throw new Error("Unable to retrieve agents.");
 
         const data = await res.json();

@@ -1,11 +1,14 @@
+// import styles from "./Logo.module.css";
+
 import { Link } from "react-router-dom";
-import styles from "./Logo.module.css";
 
 function Logo() {
   return (
-    <Link to="/">
-      <img src="/logo.png" alt="Riot Roulette" className={styles.logo}></img>
-    </Link>
+    <img
+      src="/logo.png"
+      alt="Riot Roulette"
+      className="w-1/3 h-1/3 sm:w-1/4 sm:h-1/4 pt-10"
+    ></img>
   );
 }
 export default Logo;
