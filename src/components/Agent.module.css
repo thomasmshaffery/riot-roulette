@@ -1,14 +1,14 @@
 @import url("https://fonts.cdnfonts.com/css/valorant");
 
 .agent {
-  width: 600px;
-  height: 600px;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2vh;
+  height: 70dvh;
+  width: 80dvw;
 
   background: rgba(23, 23, 23, 0.505);
   backdrop-filter: blur(50px);
@@ -28,5 +28,5 @@
 
 .agent h1 {
   font-family: "VALORANT", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
 }
