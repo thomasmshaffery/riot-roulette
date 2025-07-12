@@ -59,7 +59,7 @@ function Valorant({ agents }) {
             </div>
           )}
           {currentAgent && currentAgent.isPlayableCharacter ? (
-            <div className="place-items-center relative bottom-65 text-white text-center">
+            <div className="place-items-center relative bottom-67.5 text-white text-center">
               <Agent
                 agent={currentAgent}
                 className="h-60dvh w-80dvw sm:h-40dvh w-40dvh"
